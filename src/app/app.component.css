@@ -1,0 +1,375 @@
+/******xperimental*****/
+
+@media screen and (min-width: 675px) {
+  body {
+    position: relative;
+    min-height: 100vh;
+  }
+
+  .main-container {
+    padding-bottom: 10vh;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    min-width: 90vw;
+    height: 10vh;
+  }
+}
+
+/*@media screen and (max-width:675px){
+	.footer{
+		margin-bottom: 10vh;
+	}
+
+	.fa{
+		margin-bottom: 32px;
+	}
+}
+*/
+
+/*********************/
+
+.logo {
+  width: 300px;
+  object-fit: cover;
+}
+
+.transparent-nav {
+  background-color: transparent !important;
+}
+
+/****Underline Effect*****/
+.nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.2s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  transition: width 0.4s;
+}
+
+.nav-item:nth-child(5) .nav-link:hover::after {
+  width: 0;
+}
+
+.nav-link.active::after {
+  width: 100%;
+  transition: width 0.4s;
+}
+
+/********Blur effect*********/
+
+.blur-div {
+  position: relative;
+  cursor: pointer;
+}
+
+.blur {
+  width: 110%;
+  transform: translateX(-5%);
+  position: absolute;
+  min-height: 100%;
+  background-color: #fff;
+  filter: blur(1px);
+  opacity: 0.2;
+  border-radius: 25px;
+}
+
+/*************************/
+
+body {
+  background: url("/assets/backg.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
+  /*border:2px solid red;*/
+  /*overflow: hidden;*/
+}
+
+.safari-class {
+  background-repeat: repeat-y;
+  background-attachment: scroll;
+  background-size: contain;
+}
+
+@media screen and (min-width: 1400px) {
+  body {
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    min-height: 100vh;
+  }
+}
+
+/********NAVBAR************/
+.nav-item .nav-link {
+  color: #ffffff;
+  opacity: 1;
+  font-size: 20px;
+}
+
+.nav-item {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.main-container {
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.footer-text {
+  color: #ffffff;
+  margin-top: 16px;
+  font-size: 22px;
+}
+
+.fa {
+  font-size: 32px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 100%;
+  height: 56px;
+  width: 56px;
+  text-align: center;
+  padding-top: 10px;
+  margin-right: 24px;
+  opacity: 0.5;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.fa:nth-child(1) {
+  margin-left: 32px;
+}
+
+/******Footer Underline*********/
+.underline-footer::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 5px;
+  background: #fff;
+  transition: width 0.2s;
+  animation: underline 5s infinite;
+}
+
+.results-div:hover {
+  cursor: pointer;
+}
+
+@keyframes underline {
+  0% {
+    width: 100%;
+  }
+
+  50% {
+    width: 100%;
+    transform: translateX(500px);
+    opacity: 0;
+  }
+  51% {
+    width: 100%;
+    transform: translateX(-400px);
+    opacity: 0;
+  }
+
+  52% {
+    opacity: 1;
+  }
+
+  100% {
+    width: 100%;
+    transform: translateX(0);
+  }
+}
+
+/******************************/
+
+@media screen and (max-width: 675px) {
+  .main-container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .main-container-mobile {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .logo {
+    width: 200px;
+  }
+
+  .footer {
+    padding-bottom: 16px;
+  }
+
+  .fa {
+    font-size: 24px;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 100%;
+    height: 42px;
+    width: 42px;
+    text-align: center;
+    padding-top: 7.5px;
+    margin-right: 14px;
+    opacity: 0.5;
+  }
+
+  .fa:nth-child(1) {
+    margin-left: 0px;
+  }
+
+  .fa:last-child {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 1225px) {
+  .nav-item .nav-link {
+    font-size: 20px;
+  }
+
+  .nav-item {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  /*.footer{
+		position:fixed;
+		bottom:0;
+		padding-bottom: 20px;
+		width:90vw;
+	}*/
+}
+
+@media screen and (max-width: 1100px) and (min-width: 675px) {
+  .nav-item .nav-link {
+    font-size: 16px;
+  }
+
+  .nav-item {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  body {
+    background-attachment: scroll;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .footer {
+    margin-top: 32px;
+  }
+
+  /*	body.body-mobile-class{
+		background: url("/assets/backg_phone.png");
+		overflow:hidden;
+		background-position: bottom;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: cover;
+	   	min-height:100vh;
+	  	max-width:100vw;
+	}*/
+
+  body {
+    background: url("/assets/backg_phone.png");
+    overflow: hidden;
+    /*background-size: contain;*/
+    background-position: bottom;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 100vh;
+    max-width: 100vw;
+  }
+
+  .navbar-toggler {
+    background-color: #fff;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: relative;
+  }
+
+  .line-1 {
+    display: block;
+    border: 1px solid black;
+    width: 15px;
+    margin-top: 5px;
+    transform: translate3d(4px, -24px, 0);
+  }
+
+  .line-m {
+    display: block;
+    border: 1px solid black;
+    width: 10px;
+    margin-top: 5px;
+    transform: translate3d(8px, -24px, 0);
+  }
+
+  .footer-text {
+    font-size: 18px;
+  }
+
+  .sl-1 {
+    display: block;
+    border: 1px solid black;
+    width: 50%;
+    position: absolute;
+    margin: 0 !important;
+    bottom: 50%;
+    transform: rotate(45deg);
+  }
+
+  .sl-2 {
+    display: block;
+    border: 1px solid black;
+    width: 50%;
+    position: absolute;
+    margin: 0 !important;
+    bottom: 50%;
+    transform: rotate(-45deg);
+  }
+}
+
+/*****Final changes********/
+.nav-link:hover {
+  cursor: pointer;
+}
+
+.fa:hover {
+  cursor: pointer;
+  opacity: 1;
+  transition: 0.25s ease-in-out;
+}
+
+.hide-overflow {
+  overflow-y: hidden;
+}

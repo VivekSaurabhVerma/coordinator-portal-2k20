@@ -1,0 +1,87 @@
+<ngx-ui-loader fgsType="rectangle-bounce-pulse-out" fgsColor="#0a193b" pbColor="#0a193b"></ngx-ui-loader>
+<body [class.hide-overflow]="overflowHidden" [class.safari-class]="isSafari">
+<div class="main-container">
+<nav @navAnimation class="navbar navbar-expand-lg bg-dark navbar-dark transparent-nav">
+  <!-- Brand -->
+  <a class="navbar-brand" target="_blank" href="http://techfest.org/"><img src="assets/logo.png" class="logo"></a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button (click)="showCross()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+    <span class="line-1" [class.d-none]="showx"></span>
+    <span class="line-1 line-m" [class.d-none]="showx"></span>
+    <span class="line-1" [class.d-none]="showx"></span>
+    <span class="sl-1" [class.d-none]="!showx"></span>
+    <span class="sl-2" [class.d-none]="!showx"></span>
+  </button>
+
+  <!-- Navbar links -->
+
+    <div class="collapse navbar-collapse main-container-mobile" id="collapsibleNavbar">
+      
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link active" (click)="changeScreen($event,'home')">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="changeScreen($event,'whytf')">WHY TF</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="redirect('departments')" id="departments">DEPARTMENTS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="redirect('memories')" id="memories">COORDIE MEMORIES</a>
+        </li>
+        <li class="nav-item" [class.d-none]="mobile">
+          <div class="blur-div" (click)="redirectAnotherPage('https://docs.google.com/forms/d/e/1FAIpQLScfj7PY-xHs5qVLuMoQ1useoIYowsRx9mUvorze02WrBm06xQ/viewform?usp=sf_link
+')" (mouseenter)="toggleTrigger()" (mouseleave)="toggleTrigger()" >
+            <div class="blur">
+              <a class="nav-link" id="register" style="min-height:100%;width:100%;position:absolute"></a>
+            </div>
+            <div [@tR]="stateRegister" class="blur-text">
+              <a  class="nav-link" (@tR.done)="log($event)">REGISTER</a>
+            </div>
+          </div>
+
+        </li>
+        <li class="nav-item" [class.d-none]="!mobile">
+          <a class="nav-link" (click)="redirectAnotherPage('https://docs.google.com/forms/d/e/1FAIpQLScfj7PY-xHs5qVLuMoQ1useoIYowsRx9mUvorze02WrBm06xQ/viewform?usp=sf_link
+')" id="memories">REGISTER</a>
+        </li>
+      </ul>
+    </div>
+  
+</nav>
+
+<div class="main-container-mobile">
+
+  <!-- <app-home></app-home> -->
+  <div [@routeAnimations]="prepareRoute(outlet)" (@routeAnimations.done)="routeAnimationComplete($event)">
+    <router-outlet #outlet="outlet"></router-outlet>
+  </div>
+
+   
+    <div @footerAnimation class="footer row" *ngIf="footer">
+      <div class="col-12 col-lg-6" *ngIf="smallWidth">
+         <p class="footer-text text-center font-weight-bold" (click)="redirect('results')"><span class=" underline-footer d-inline-block" style="overflow-x: hidden">RESULTS OF REVERSE VIDEO CHALLENGE</span></p>
+      </div>
+      <div class="col-12 col-lg-6 text-center text-lg-left">
+          <span (click)="redirectAnotherPage('https://twitter.com/Techfest_IITB
+          ')" class="fa fa-twitter"></span>
+           <span (click)="redirectAnotherPage('https://www.linkedin.com/company/techfest/')" class="fa fa-linkedin"></span>
+          <span (click)="redirectAnotherPage('https://www.facebook.com/iitbombaytechfest')" class="fa fa-facebook"></span>
+          <span (click)="redirectAnotherPage('https://www.instagram.com/techfest_iitbombay/')" class="fa fa-instagram"></span>
+        <span (click)="redirectAnotherPage('https://www.youtube.com/user/techfestiitbombay')" class="fa fa-youtube"></span>
+      </div>
+      <div class="col-12 col-lg-6 results-div" *ngIf="!smallWidth">
+        <p class="footer-text text-lg-right text-center" (click)="redirect('results')"><span class=" underline-footer d-inline-block" style="overflow-x: hidden;font-weight:bolder">RESULTS OF REVERSE VIDEO CHALLENGE</span></p>
+      </div>
+    </div>
+
+
+
+
+
+</div>
+</div>
+</body>

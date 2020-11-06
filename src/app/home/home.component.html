@@ -1,0 +1,87 @@
+<div class="row justify-content-center main-div" *ngIf="screen == 'whytf'">
+  <div class="col-12 col-sm-10 col-md-8">
+    <p
+      @animateHead
+      class="head text-center text-md-left"
+      *ngIf="screen == 'whytf'"
+      id="whytf"
+    >
+      WHY TECHFEST?
+    </p>
+    <div class="row">
+      <div
+        @animateHead
+        class="col-2 divi text-md-right d-none d-md-inline-block"
+      >
+        <p class="line"></p>
+      </div>
+      <div @animateContent class="col-12 col-md-10 text-center text-md-left">
+        <p class="description-text">
+          This is probably the question you’re most curious to know the answer
+          to! Techfest provides you with opportunities and skills that play an
+          essential role in the development of your personality. From managing
+          organizers to handling events, Techfest equips you with valuable
+          skills such as leadership, professionalism, pressure handling and time
+          management. All in all, if you want to make memories and build
+          relationships, come join us. Be a part of the Techfest family.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="row justify-content-center main-div"
+  *ngIf="screen == 'home'"
+  id="coordi-div"
+>
+  <div class="col-12 col-sm-10 col-md-9">
+    <p
+      @animateHead
+      class="head text-center text-md-left"
+      *ngIf="screen == 'home'"
+    >
+      <img src="assets/cp_title.png" id="cpimg" />
+    </p>
+    <div class="row">
+      <div
+        @animateHead
+        class="col-2 divi text-md-right d-none d-md-inline-block"
+      >
+        <p class="line"></p>
+      </div>
+      <div
+        @animateContent
+        class="col-12 col-md-10 text-center text-md-left"
+        id="animation-container"
+      >
+        <div class="text-div" style="margin-left: 0;">
+          <p class="description-text">
+            A Coordinator's motivation fuels the flame that is Techfest.
+          </p>
+          <p class="description-text">Don't be a guest to your own fest.</p>
+          <!-- <p class="description-text">It starts with you!</p> -->
+        </div>
+        <div class="row animated-text text-uppercase">
+          <div class="d-inline-block">
+            <p class="lighter">You are</p>
+          </div>
+          <div class="d-inline-block animated-main-text">
+            <p class="text1">indispensable</p>
+            <br />
+            <p class="text2">family</p>
+            <br />
+            <p class="text3">part of Techfest</p>
+            <br />
+            <p id="textfinal">part of Techfest</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="row justify-content-center main-div"
+  *ngIf="screen == 'departments'"
+></div>

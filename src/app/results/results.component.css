@@ -1,0 +1,172 @@
+.head-text{
+	font-size:64px;
+	color:#fff;
+	margin-bottom:0;
+}
+
+.head-row{
+	border-bottom:2px solid #fff;
+	transform: translateY(-35%);
+}
+
+.cross{
+	height:30px;
+	width:30px;
+	text-align: right;
+	transform: translateY(4px) rotate(0);
+	transition: 0.5s;
+	cursor:pointer;
+}
+
+.cross:hover{
+	transform: translateY(4px) rotate(90deg);
+	transition: 0.5s;
+}
+
+.manager-img{
+	width:300px;
+	object-fit:cover;
+	object-position: top;
+	height: 275px;
+}
+
+.manager-name,.manager-num{
+	font-size:24px;
+	color:#ffffff;
+}
+
+.manager-name{
+	font-weight: bold;
+	margin-bottom: 0;
+	margin-top:32px;
+}
+
+
+.fa{
+	font-size: 32px;
+	color:#ffffff;
+	border:1px solid #ffffff;
+	border-radius: 100%; 
+	height:56px; 
+	width:56px; 
+	text-align: center;
+	padding-top:10px;
+	margin-right:14px;
+	opacity:0.8;
+}
+
+.fa:last-child{
+	margin-right: 0;
+}
+
+/*****Image headings*******/
+.image-head{
+	height:100px;
+	margin-bottom: -32px;
+}
+
+#events-cross{
+	margin-top:12.5%;
+}
+
+/********Absolutely positioning leaves*******/
+.image{
+	width:300px;
+	height: 275px;
+	position: relative;
+	margin:auto;
+}
+
+.medal-img{
+	position: absolute;
+	text-align:center;
+	width: 100%;
+	bottom:-15%;
+}
+
+.medal-img img{
+	width:40%;
+}
+
+
+
+
+@media screen and (max-width:675px){
+	.head-text{
+		font-size:20px;
+	}
+
+	.cross{
+		height:16px;
+		width:16px;
+		transform: translateY(0px);
+	}
+
+
+	#events-cross{
+		margin-top:50%;
+	}
+
+	.text-header{
+		color:#fff;
+		font-weight: bold;
+		margin-bottom: 0;
+		transform: translateX(24px);
+	}
+
+	.head-row{
+		transform: translateY(-0%);
+	}
+
+	.position-label{
+		margin-top:64px !important;
+	}
+
+}
+
+
+/*****Play Button *****/
+.round-button {
+	position:absolute;
+	top:35%;
+	left:36%;
+	box-sizing: border-box;
+	display:block;
+	width:80px;
+	height:80px;
+	padding-top: 14px;
+	padding-left: 8px;
+	line-height: 20px;
+	border: 6px solid #fff;
+	border-radius: 50%;
+	color:#0a193b;
+	text-align:center;
+	text-decoration:none;
+	background-color: white;
+	font-size:20px;
+	font-weight:bold;
+	transition: all 0.3s ease;
+}
+
+#play{
+	color:#0a193b;
+	transform: translateY(-10%);
+	opacity: 1;
+}
+
+.round-button:hover {
+	background-color: white;
+	box-shadow: 0px 0px 10px #0A193B;
+}
+
+.mobile-text-results{
+	font-size: 40px;
+}
+
+#events-cross-mobile{
+	height:25px;
+	width:25px;
+	transform: translate3d(0,70%,0);
+
+}
+

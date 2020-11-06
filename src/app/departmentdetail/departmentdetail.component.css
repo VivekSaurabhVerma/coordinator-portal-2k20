@@ -1,0 +1,144 @@
+.head{
+	color:#ffffff;
+	font-size: 56px;
+	font-weight: bold;
+	/*border-bottom:2px solid #ffffff;*/
+}
+
+.head:before{
+  content: '\2807';
+  font-size: 56px;
+}
+
+.description{
+	color:#ffffff;
+	font-size:25px; 
+}
+
+.circle{
+	background-color:rgba(128,128,128,1); 
+	border-radius: 100%;
+	height:15px;
+	width:15px;
+	margin-left:12.5px;
+}
+
+.circle.active{
+	background-color:#fff;
+	height:20px;
+	width:20px;
+	margin-left:10px;
+}
+
+.indicators{
+	padding-top: 7.5%;
+	padding-left:4%;
+}
+
+.indicators img,.indicators .circle, .cross{
+	cursor:pointer;
+}
+
+.blur-div{
+	position:relative;
+	cursor: pointer;
+}
+
+.blur{
+	width:45%;
+	transform: translateX(-5%);
+	position:absolute;
+	/*border:2px solid green;*/
+	left:62.5%;
+	min-height:120%;
+	bottom:-10%;
+	background-color: #fff;
+	filter:blur(1px);
+	opacity:0.2;
+	border-radius: 25px;
+}
+
+.button-text{
+	font-size:24px;
+}
+
+.cross{
+	height:30px;
+	width:30px;
+	text-align: right;
+	margin-top:35%;
+	transform: rotate(0);
+	transition: 0.5s;
+}
+
+.cross:hover{
+	transform: rotate(90deg);
+	transition: 0.5s;
+}
+
+.multiple-pics,.single-pics{
+	animation: fader 0.2s ease-in-out;
+}
+
+@keyframes fader{
+	from {opacity:0;}
+	to {opacity:1;}
+}
+
+
+@media screen and (max-width:675px){
+	.head,.head:before{
+		margin-top: 16px;
+		font-size: 32px;
+	}
+
+	.cross{
+		height:20px;
+		width:20px;
+		text-align: right;
+		margin-top:32px;
+		transform: rotate(0);
+		transition: 0.5s;
+	}
+
+	.description{
+		font-size:16px; 
+		text-align: center;
+	}
+
+	.blur-text{
+		text-align: center;
+	}
+
+	.blur{
+		width:75%;
+		transform: translateX(-66.5%);
+		position:absolute;
+		min-height:120%;
+		bottom:-10%;
+		background-color: #fff;
+		filter:blur(1px);
+		opacity:0.2;
+		border-radius: 25px;
+	}
+
+	.mobile{
+		margin-bottom: 100px;
+	}
+
+	.button-text{
+		font-size:18px;
+	}
+}
+
+
+/*****Final changes******/
+.navigatearrows{
+	height:40px;
+	width:40px;
+}
+
+#events-blur-div .blur{
+	width:50%;
+	transform: translateX(-17%);
+}

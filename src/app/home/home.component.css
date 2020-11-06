@@ -1,0 +1,184 @@
+.head{
+	font-size: 64px;
+	color: #ffffff;
+	font-weight:bold;
+}
+
+.main-div{
+	margin-top:48px;
+}
+
+
+.description-text{
+	color:#ffffff;
+	font-size:24px;
+	margin-left:0;
+}
+
+.description-text:nth-child(1),.description-text:nth-child(2){
+	margin-bottom: 0;
+}
+.line{
+	/*width:20px;*/
+	border-left:64px solid #ffffff;
+	height:2px;
+	margin-top: 16px;
+	display: inline-block;
+}
+
+#cpimg{
+	height:68px;
+	object-fit: cover;
+}
+
+#whytf:before{
+  content: '\2807';
+  font-size: 64px;
+}
+
+@media screen and (max-width:1080px){
+	#cpimg{
+		height:56px;
+	}
+}
+
+@media screen and (max-width:900px){
+	#cpimg{
+		height:48px;
+	}
+}
+
+@media screen and (max-width:900px){
+	#cpimg{
+		width:100%;
+		object-fit: contain;
+	}
+}
+
+
+
+@media screen and (max-width:675px){
+	.head,#whytf:before{
+		font-size: 32px;
+	}
+
+	.description-text{
+		font-size:16px;
+	}
+}
+
+
+/********Block ***********/
+@keyframes slideDown1{
+	0% {transform: translateX(0); position: absolute; top: 0; opacity: 1;}
+	100% {transform: translateY(100px); opacity: 0;}
+}
+@keyframes slideDown{
+	0% {transform: translateX(0); position: absolute; top: 0; opacity: 1;}
+	100% {transform: translateY(100px); opacity: 0;}
+}
+@keyframes slideDownlast{
+	0% {transform: translateX(0); position: absolute; top: 0; opacity: 1;}
+	100% {transform: translateY(100px); opacity: 0;}
+}
+.text1 {
+	animation-name: slideDown1;
+	opacity: 0;
+	animation-duration: 2.5s;
+	animation-iteration-count: 1;
+	animation-direction: reverse;
+	animation-timing-function: cubic-bezier(.76,.05,.86,.06);
+}
+
+.text2 {
+	position: absolute;
+	top: 0;
+	opacity: 0;
+	animation-name: slideDown;
+	animation-delay: 2.5s;
+	animation-duration: 2.5s;
+	animation-direction: reverse;
+	animation-iteration-count: 1;
+	animation-timing-function: cubic-bezier(.76,.05,.86,.06);
+}
+.text3 {
+	position: absolute;
+	top: 0;
+	opacity: 0;
+	animation-name: slideDownlast;
+	animation-duration: 2.5s;
+	animation-delay: 5s;
+	animation-direction: reverse;
+	animation-iteration-count: 1;
+	animation-timing-function: cubic-bezier(.76,.05,.86,.06);
+}
+
+#textfinal {
+	position: absolute;
+	top: 0;
+	opacity: 1;
+	animation-name: showlast;
+	animation-duration: 7.5s;
+	animation-iteration-count: 1;
+}
+
+@keyframes showlast {
+	0% {opacity: 0;}
+	99% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+.animated-text{
+	color:#fff;
+	overflow: hidden;
+	font-size: 48px;
+	width:100%; 
+	position:relative;
+	overflow:hidden;
+	height:100px;
+
+}
+
+.lighter{
+	opacity: 0.4;
+}
+
+.animated-main-text{
+	position: relative;
+	padding-left: 12px;
+	min-width:70%;
+	font-weight:bold;
+}
+
+.text-div{
+	transform: translateX(-15px);
+}
+
+@media screen and (max-width:1150px){
+	.animated-text{
+		font-size: 36px;
+	}
+}
+
+@media screen and (max-width: 675px){
+	.animated-text{
+		font-size: 21px;
+		padding-left:7.5%;
+		margin:auto;
+	}
+
+	.animated-main-text{
+		margin:auto;
+		padding-left: 5px;
+	}
+
+	.text-div{
+		transform: translateX(0px);
+	}
+
+}
+
+
+
+
+

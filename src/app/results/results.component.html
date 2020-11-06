@@ -1,0 +1,59 @@
+<div class="container-fluid">
+	<div class="row text-center head-row">
+		<div class="col-10">
+			<p class="text-left text-md-center" *ngIf="!mobile"> <img src="assets/reversevc.png" class="image-head"></p>
+			<p class="text-center text-header mobile-text-results" *ngIf="mobile">RESULTS</p>
+		</div>
+		<div class="col-2">
+			<p *ngIf="!mobile"><img class="cross" id="events-cross" (click)="redirect('')" src="/assets/cross.png"></p>
+			<p *ngIf="mobile"><img class="cross" id="events-cross-mobile" (click)="redirect('')" src="/assets/cross.png"></p>
+		</div>
+	</div>
+
+	<div class="row justify-content-around">
+		<div class="col-12 col-md-3">
+			<div class="row">
+				<div class="col-12 manager-col">
+					<p class="manager-num text-center mt-2 mb-0">1st</p>
+					<div class="image">
+						<img src="assets/results/1.png" class="manager-img">
+						<div class="medal-img"><img src="assets/gold.png"></div>
+						<a href="https://www.facebook.com/story.php?story_fbid=250180469572878&id=100037427807045" target="_blank" class="round-button"><span class="fa fa-play" id="play"></span></a>
+					</div>
+					<p class="manager-name text-center">Anchal Yadav</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-12 col-md-3">
+			<div class="row">
+				<div class="col-12 manager-col">
+					<p class="manager-num text-center mt-2 position-label mb-0">2nd</p>
+					<div class="image">
+						<img src="assets/results/2.png" class="manager-img">
+						<div class="medal-img"><img src="assets/silver.png"></div>
+						<a href="https://www.facebook.com/story.php?story_fbid=243064550315925&id=100038371443841" target="_blank" class="round-button"><span class="fa fa-play" id="play"></span></a>
+					</div>
+					<p class="manager-name text-center">Rahul Kumawat</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-12 col-md-3">
+			<div class="row">
+				<div class="col-12 manager-col">
+					<p class="manager-num text-center mt-2 position-label  mb-0">3rd</p>
+					<div class="image">
+						<img src="assets/results/3.png" class="manager-img">
+						<div class="medal-img"><img src="assets/bronze.png"></div>
+						<a href="https://www.facebook.com/story.php?story_fbid=2719501461627084&id=100007017701738" target="_blank" class="round-button"><span class="fa fa-play" id="play"></span></a>
+					</div>
+					<p class="manager-name text-center">Rajat Mehra</p>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+</div>
